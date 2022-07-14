@@ -51,6 +51,7 @@ module.exports = class User{
             const user = this.User.create({ nomeusuario: this.name, email: this.email, pswd: this.password})        
             return res.send({message: "OK"})    
         } catch (error) {             
+            console.log(error)
             return res.status(401).send({erro: "Unexpected error"})                                
                                     
         }   
